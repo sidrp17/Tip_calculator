@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Tip Calculator</title>
+    <!-- link to css file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- heading of the web page -->
+
+    <!-- calculator container -->
+    <div class="calculator-container">
+        <!-- this div use for all user input -->
+        <div class="input-section">
+            <!-- bill amount input -->
+            <div class="form-control">
+                <label for="bill">bill</label>
+                <input type="number" name="bill-input" id="bill" class="input-field" placeholder="0" min="0">
+            </div>
+            <!-- tip percentage group -->
+            <div class="form-control">
+                <P>Select the tip % from following...</P>
+                <!-- container for tip buttons -->
+                <div class="tip-buttons">
+                    <!-- percentage buttons -->
+                    <button type="button" class="tip-percent-btn" data-tip="5">5%</button>
+                    <button type="button" class="tip-percent-btn" data-tip="10">10%</button>
+                    <button type="button" class="tip-percent-btn" data-tip="15">15%</button>
+                    <button type="button" class="tip-percent-btn" data-tip="25">25%</button>
+                    <button type="button" class="tip-percent-btn" data-tip="50">50%</button>
+                    <!-- adding the input field for user to input custom percentage -->
+                    <input type="number" name="cust-tip-percentage" id="custom-tip" placeholder="custom %"
+                        class="input-field" min="0">
+                </div>
+            </div>
+            <div class="form-control">
+                <label for="num-people">No of people</label>
+                <input type="number" name="num-people" id="num-people" class="input-field" placeholder="1" min="1">
+            </div>
+        </div>
+        <!-- this div use for all o/p -->
+        <div class="output-section">
+            <!-- display area for tip amt/person-->
+            <div class="result-line">
+                <div class="result-label">
+                    <p>tip amount</p>
+                    <span>/ person</span>
+                </div>
+                <div class="result-value">
+                    <span id="tip-amount-display">$0.00</span>
+                </div>
+            </div>
+            <!-- display area for  total amt/person-->
+            <div class="result-line">
+                <div class="result-label">
+                    <p>total amount</p>
+                    <span>/ person</span>
+                </div>
+                <div class="result-value">
+                    <span id="total-amount-display">$0.00</span>
+                </div>
+            </div>
+            <button type="button" id="reset-btn" class="reset-button">RESET</button>
+        </div>
+    </div>
+
+    <!-- link to script file -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>
